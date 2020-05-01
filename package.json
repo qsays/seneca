@@ -77,7 +77,9 @@
     "clean": "rm -rf node_modules package-lock.json yarn.lock",
     "reset": "npm run clean && npm i && npm test",
     "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push && git tag v$REPO_VERSION && git push --tags;",
-    "repo-publish": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && npm run clean && npm i --registry http://registry.npmjs.org && npm run prettier && npm test && npm run repo-tag --registry http://registry.npmjs.org && npm publish  --registry http://registry.npmjs.org && npm dist-tag add seneca@$REPO_VERSION next --registry http://registry.npmjs.org && npm dist-tag add seneca@$REPO_VERSION plugin --registry http://registry.npmjs.org"
+    "repo-publish": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && npm run clean && npm i --registry http://registry.npmjs.org && npm run prettier && npm test && npm run repo-tag --registry http://registry.npmjs.org && npm publish  --registry http://registry.npmjs.org && npm dist-tag add seneca@$REPO_VERSION next --registry http://registry.npmjs.org && npm dist-tag add seneca@$REPO_VERSION plugin --registry http://registry.npmjs.org",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@hapi/joi": "^15.1.1",
@@ -97,7 +99,8 @@
     "qs": "^6.9.1",
     "rolling-stats": "^0.1.1",
     "seneca-transport": "^5.0.1",
-    "use-plugin": "^6.0.2"
+    "use-plugin": "^6.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.1",
@@ -115,5 +118,6 @@
     "seneca-error-test": "^0.2.2",
     "seneca-joi": "^6.0.0",
     "seneca-promisify": "^1.1.0"
-  }
+  },
+  "snyk": true
 }

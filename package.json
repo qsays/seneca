@@ -82,7 +82,7 @@
   "dependencies": {
     "@hapi/joi": "^15.1.1",
     "@hapi/wreck": "^17.0.0",
-    "eraro": "^2.1.0",
+    "eraro": "^3.0.1",
     "fast-safe-stringify": "^2.0.7",
     "gate-executor": "^2.1.0",
     "gex": "^1.0.0",
@@ -90,14 +90,14 @@
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
     "nid": "^0.3.2",
-    "norma": "^2.0.2",
+    "norma": "^3.1.0",
     "optioner": "^4.2.0",
     "ordu": "^0.1.1",
     "patrun": "^3.0.0",
     "qs": "^6.9.1",
     "rolling-stats": "^0.1.1",
     "seneca-transport": "^5.0.1",
-    "use-plugin": "^6.0.2"
+    "use-plugin": "^10.1.0"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.1",

@@ -96,7 +96,7 @@
     "patrun": "^3.0.0",
     "qs": "^6.9.1",
     "rolling-stats": "^0.1.1",
-    "seneca-transport": "^5.0.1",
+    "seneca-transport": "^7.0.1",
     "use-plugin": "^6.0.2"
   },
   "devDependencies": {
